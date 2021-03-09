@@ -14,7 +14,7 @@ app.get('/ola/:fog/:bar', (req, res) => {
     res.json({
         message: 'Greeting all! ', data: [  
         req.params.fog,
-        req.params.bar
+        req.params.bar,
         ]});
     //res.json({ message: 'Greeting all!\n\n' + users.join('\n')});
 });
