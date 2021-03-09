@@ -1,0 +1,28 @@
+
+{
+  "name": "CA1-vs-CA2-Restaurant",
+  "autor": "Misleine Costa",
+  "lincense": "ISC",
+  "version": "1.0.0",
+  "description": "My app for IMA",
+  "main": "indes.js",
+  "scripts": {
+    "Restaurant": "echo \"Error: no Restaurant specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MisleineCosta/mongodb-1/commit/50a453176664e415240b7807d06b6f055b2a7c47"
+  },
+  "homepage": "https://github.com/MisleineCosta/CA1-vs-CA2-Restaurant#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
