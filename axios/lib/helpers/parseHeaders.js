@@ -1,6 +1,6 @@
 'use strict';
 
-var utils = require('./../utils');
+var utils = require('../utils');
 
 // Headers whose duplicates are ignored by node
 // c.f. https://nodejs.org/api/http.html#http_message_headers

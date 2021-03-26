@@ -1,12 +1,12 @@
 'use strict';
 
-var utils = require('./../utils');
-var settle = require('./../core/settle');
-var cookies = require('./../helpers/cookies');
-var buildURL = require('./../helpers/buildURL');
+var utils = require('../utils');
+var settle = require('../core/settle');
+var cookies = require('../helpers/cookies');
+var buildURL = require('../helpers/buildURL');
 var buildFullPath = require('../core/buildFullPath');
-var parseHeaders = require('./../helpers/parseHeaders');
-var isURLSameOrigin = require('./../helpers/isURLSameOrigin');
+var parseHeaders = require('../helpers/parseHeaders');
+var isURLSameOrigin = require('../helpers/isURLSameOrigin');
 var createError = require('../core/createError');
 
 module.exports = function xhrAdapter(config) {

@@ -1,6 +1,6 @@
 'use strict';
 
-var utils = require('./../utils');
+var utils = require('../utils');
 var transformData = require('./transformData');
 var isCancel = require('../cancel/isCancel');
 var defaults = require('../defaults');
