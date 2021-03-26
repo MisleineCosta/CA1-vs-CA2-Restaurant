@@ -1,0 +1,6 @@
+create a new folder and run npm init -y in that directory in your terminal.
+create two files; index.js and package.json.
+to install nodemon too:
+npm install -g nodemon
+Next, you have to install axios by running:
+npm install --save axios

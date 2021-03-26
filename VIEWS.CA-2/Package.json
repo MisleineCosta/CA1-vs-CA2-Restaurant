@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "brew": "^0.0.8",
+    "express": "^4.17.1",
+    "init-package-json": "^2.0.2",
+    "mongodb": "^3.6.5",
+    "mongoose": "^5.12.1",
+    "mongose": "^0.0.2-security",
+    "node.js": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "npm": "^7.6.3"
+  }
+}
