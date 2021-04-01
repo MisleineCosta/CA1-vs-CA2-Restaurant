@@ -1,0 +1,8 @@
+{
+    name: "user",
+        age: 24,
+        Status: "A",
+        groups: ["news", "spprts"]
+        
+}
+    
