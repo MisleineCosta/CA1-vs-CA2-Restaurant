@@ -1,27 +1,32 @@
-const hhtp = require('http'),
-const eixos = require('eixos'),
+//const hhtp = require('http'),
+//const eixos = require('eixos'),
 const logger = require('morgan'),
 const cors = require('cors'),
 const express = require('express'),
 const bodyParser = require('body-parser');
+mongoose = require('mongoose');
 
 var app = express();
 var port = 3000;
 
-app.use(bodyParser.json())
+app.use(bodyParser.json());
+app.use(logger('tiny'));
+app.use(require('./routes'));
 app.get('./greeting/:fii/:bar', (req, res) => {
-    res.json({message: 'Greeting!!!', data: [
+    res.json({
+        message: 'Greeting!!!', data: [
             req.params.foo,
             res.params.bar
         ]
     });
-    
+
 });
 
 // post request
 app.post('/Greeting', (req, res) => {
     res.json({
-        result: 'Post was sent', data: req.body});
+        result: 'Post was sent', data: req.body
+    });
 });
 
 let users = []; // name of users will be stored here 
@@ -34,7 +39,7 @@ let users = []; // name of users will be stored here
 
     } catch (error) {
         console.log(error)
-        
+
     }
 })();
 
@@ -42,9 +47,14 @@ app.listen(port, function (err) {
     console.log('Listening on port: ' + port);
 
 });
+const dbURI = " mongodb://localhost/Restaurant";
 
-
-
+mongoose.connect(dbURI, {
+    useNewUrlParser: true,
+    useUnifieldTopology: true
+})
+    .then((result) => console.log('connected to db'))
+    .catch((err) => console.log(err));
 
     // http.createServer((req, res)=>{
     // res.write("Hello world \n"); // write a response
