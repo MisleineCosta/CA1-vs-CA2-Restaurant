@@ -1,8 +1,5 @@
-image:
-  file: .gitpod.Dockerfile
+image: gitpod/workspace-mongodb
+
 tasks:
-  - init: Running MongoDB
-    command: mkdir -p data && mongod --dbpath data
-  - init: Install nodemon
-    command: npm i -g nodemon && npm start
-    
+  - init: 'echo "TODO: Replace with init/build command"'
+    command: 'echo "TODO: Replace with command to start project"'
