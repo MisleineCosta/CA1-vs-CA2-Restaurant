@@ -1,4 +1,14 @@
-app.post("/users", userCtrl.createUser);
+const http = require('http');
+const app = require('./app');
+
+const port = process.env.PORT || 3000;
+
+const server = http.createServer(app);
+
+server.listen(port);
+
+
+/*app.post("/users", userCtrl.createUser);
 app.get("/users", userCtrl.getUsers);
 app.get("/users/:id", userCtrl.getUser);
 app.delete("/users/:id", userCtrl.deleteUser);
@@ -24,4 +34,4 @@ mongoose.connection.on("connected", () => {
     console.log("MongoDB is successfully connected");
 
 });
-
+*/

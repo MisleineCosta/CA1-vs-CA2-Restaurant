@@ -1,3 +1,20 @@
+
+const express = require('express');
+const app = express();
+
+app.use((req, res, next) => {
+    res.status(200).json({
+        message: 'It works 😁'
+    });
+});
+
+module.exports = app;
+
+
+
+
+
+/*
 const express = require('express')
 const mongoose = require('mongoose')
 const url = 'mongodb://localhost/AlienDBex' 
@@ -18,5 +35,4 @@ app.use('/aliens', alienRouter)
 app.listen(9000, () => {
     console.log('Server started')
 })
-
-
+*/
