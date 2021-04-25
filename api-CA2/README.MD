@@ -11,6 +11,12 @@ This repository accompanies my comment on the YouTube video on building a RESTfu
 # Usage
 Feel free to check out the branch if you are interested in '' 'git clone' '' and then run '' 'npm install' ''.
 
+Make sure to also add your Mongo Atlas Admin Username to a nodemon.json file ( which you have to create).
+{
+    "env": {
+        "MONGO_ATLAS_PW": "YOUR_MONGO_USER_PW"
+    }
+}
 
 ## Follow Redirects
 
