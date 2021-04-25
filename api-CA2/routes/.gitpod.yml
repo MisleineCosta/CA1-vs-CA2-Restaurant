@@ -1,8 +1,8 @@
 image:
   file: .gitpod.Dockerfile
 tasks:
-  - name: Running MongoDB
+  - init: Running MongoDB
     command: mkdir -p data && mongod --dbpath data
-  - name: Install nodemon
+  - init: Install nodemon
     command: npm i -g nodemon && npm start
     

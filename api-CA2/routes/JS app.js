@@ -2,21 +2,23 @@ const express = require('express');
 const app = express();
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
+const mongoose = require("mongoose"); // it will import mongoose
 
-const productRoutes = require("./api/routes/products");
-const orderRoutes = require("./api/routes/orders");
+const productRoutes = require("./api-CA2/routes/products");
+const orderRoutes = require("./api-CA2/routes/orders");
 
+//For to set up a connection within database, I need to pass a path from mongoDB on the step next. 
 mongoose.connect(
-  "mongodb+srv://Costa:" +
+// PW will be in an environment variable like this👇🏼
+  "mongodb://Costa:" +
   process.env.MONGO_ATLAS_PW +
   "M@26mi31@costa.xrtym.mongodb.net/myFirstDatabase?retryWrites=truew=majority",
   
     {
-        useMongoClient: true
+    useMongoClient: true // to connect at client
     }
 );      
-
+// to set up connection to my database
 app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
