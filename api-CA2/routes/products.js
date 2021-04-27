@@ -38,11 +38,11 @@ router.post('./', (req, res, next) => {
     */
 
 // To Create Product Object - with helps of mongoose.
-router.post("./", (req, res, _next) => {
+router.post("/", (req, res, _next) => {
     const product = new Product({
         _id: new mongoose.Types.ObjectId(), // It create auto Id for me that will be a unique Id wich I cannot get it twice. 
         name: req.body.name, // add name of curse this name will be request body's name and set up price what request body's price of product.
-        price: req.body.price,
+        price: req.body.price
     });
     // Creating special object call product.save - Save it's a method provided by mangoose to use on mongosse models. 
     // it will then store this in the DB.
@@ -59,8 +59,9 @@ router.post("./", (req, res, _next) => {
             console.log("From database", err);
             res.status(500).json({ //This sends a different response, if something fails, we will see it too.
                 error: err
-            })
+            });
         });
+    });
     // To Check return of Data - GET the product of ID. For that I will comment the damic code below👇🏼.
     router.get("/:productId", (req, res, _next) => {
         const id = req.params.productId;
@@ -84,7 +85,9 @@ router.post("./", (req, res, _next) => {
                 if (doc) {
                     res.status(200).json(doc);
                 } else {
-                    res.status(404).json({ message: "No valid entry found for provided ID 😲" });
+                    res
+                        .status(404)
+                        .json({ message: "No valid entry found for provided ID 😲" });
                 }
             })
             .catch(err => { // to get any errs
@@ -93,28 +96,28 @@ router.post("./", (req, res, _next) => {
             });
     });
     // set up the method call productId
-    router.patch("/:productId", (req, res, next) => {
-        const id = req.params.productId;
-        const updateOps = {}; // to update Operations
-        for (const ops of req.body) { // loop through all the Ops of my request body.
-            // array here👇🏼 to pass data
-            updateOps[ops.propName] = ops.value;
-        }
-        Product.update({ _id: id }, { $set: updateOps }) // No key value parse, we must change the name /or the price.
+router.patch("/:productId", (req, res, next) => {
+    const id = req.params.productId;
+    const updateOps = {}; // to update Operations
+    for (const ops of req.body) { // loop through all the Ops of my request body.
+        // array here👇🏼 to pass data
+        updateOps[ops.propName] = ops.value;
+    }
+    Product.update({ _id: id }, { $set: updateOps }) // No key value parse, we must change the name /or the price.
         //   { name: req.body.newName, 
         //   price: req.body.newPrice // to use the Product model + update method. 
-            .exec()
-            .then(result => {
-                console.log("From database 😃", result);
-                res.status(200).json(result); // the data will be sent back
-            })
-            .catch(err => {
-                console.log("From database", err);
-                res.status(500).json({// it return the errors to the user.
-                    error: err
-                });
+        .exec()
+        .then(result => {
+            console.log("From database 😃", result);
+            res.status(200).json(result); // the data will be sent back
+        })
+        .catch(err => {
+            console.log("From database", err);
+            res.status(500).json({// it return the errors to the user.
+                error: err
             });
-
+        });
+    });   
         router.delete("/:productId", (req, res, next) => {
             // res.status(200).json({
             //message: "Deleted product!"
@@ -132,5 +135,3 @@ router.post("./", (req, res, _next) => {
                 });
         });
         module.exports = router;
-    })
-});
