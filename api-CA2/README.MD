@@ -1,3 +1,19 @@
+# Creating a RESTful API with Node.js
+
+This repository accompanies my comment on the YouTube video on building a RESTful API with Node.js: CA2 Interactive Web Application - Final year.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://lavender-chicken-10v810ca.ws-eu03.gitpod.io/#/workspace/CA1-vs-CA2-Restaurant) 
+
+[![Github Ready-to-Code](https://img.shields.io/badge/Github-ready--to--code-blue?logo=gitpod)] https://github.com/MisleineCosta/CA1-vs-CA2-Restaurant/tree/MisleineCosta/gitpod-setup
+
+# Usage
+
+Feel free to check out the branch if you are interested in '' 'git clone' '' and then run '' 'npm install' ''.
+
+Make sure to also add your Mongo Atlas Admin Username to a nodemon.json file ( which you have to create). { "env": { "MONGO_ATLAS_PW": "YOUR_MONGO_USER_PW" } }
+
+
+
 ## Follow Redirects
 
 Drop-in replacement for Node's `http` and `https` modules that automatically follows redirects.

@@ -4,3 +4,15 @@ to install nodemon too:
 npm install -g nodemon
 Next, you have to install axios by running:
 npm install --save axios
+
+
+Update Readme
+
+In case you want to tell your team or community about the automated dev environments you can add a badge to your README.md.
+
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/<your-org>/<your-project>)
+
+Gitpod Ready-to-Code
+Alternatively you can use a button and put it into your documentation:
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/<your-org>/<your-project>)
+Open in Gitpod
