@@ -4,13 +4,19 @@ const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
-const productRoutes = require("./api/routes/products");
-const orderRoutes = require("./api/routes/orders");
+const productRoutes = require("./routes/products");
+const orderRoutes = require("./routes/orders");
+
+var port = process.env.PORT || 8000;
+
+app.listen(port, function(err){
+    console.log('Listening on port: ' + port);
+});
+
+app.use(express.static('static'));
 
 mongoose.connect(
-  "mongodb+srv://Costa:" +
-  process.env.MONGO_ATLAS_PW +
-  "M@26mi31@costa.xrtym.mongodb.net/myFirstDatabase?retryWrites=truew=majority",
+  "mongodb+srv://Costa:Ma26mi31@costa.xrtym.mongodb.net/myFirstDatabase?retryWrites=truew=majority",
   
     {
         useMongoClient: true
