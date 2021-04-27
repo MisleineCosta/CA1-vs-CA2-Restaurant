@@ -19,7 +19,7 @@ app.use(logger('tiny'));//morgan//knows the n point of requests and responses be
 app.use(require('./routes'));//last
 // app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: false }));
- app.use(bodyParser.json());
+app.use(bodyParser.json());
 
 // const productRoutes = require("./routes/products");
 // const orderRoutes = require("./routes/orders");
