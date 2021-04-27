@@ -4,7 +4,10 @@ to install nodemon too:
 npm install -g nodemon
 Next, you have to install axios by running:
 npm install --save axios
-
+npm i mongodb
+nmp i cors
+nmp i eixo
+or npm i mongodb multer cors eixo
 
 Update Readme
 
@@ -16,3 +19,6 @@ Gitpod Ready-to-Code
 Alternatively you can use a button and put it into your documentation:
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/<your-org>/<your-project>)
 Open in Gitpod
+
+script
+"api": "nodemon app.js",

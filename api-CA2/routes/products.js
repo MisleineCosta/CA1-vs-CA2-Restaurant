@@ -100,12 +100,9 @@ router.post("./", (req, res, _next) => {
             // array here👇🏼 to pass data
             updateOps[ops.propName] = ops.value;
         }
-        Product.update({ _id: id },
-            {
-                $set: updateOps
-            }) // No key value parse, we must change the name /or the price.
-            //   { name: req.body.newName, 
-            //   price: req.body.newPrice // to use the Product model + update method. 
+        Product.update({ _id: id }, { $set: updateOps }) // No key value parse, we must change the name /or the price.
+        //   { name: req.body.newName, 
+        //   price: req.body.newPrice // to use the Product model + update method. 
             .exec()
             .then(result => {
                 console.log("From database 😃", result);
