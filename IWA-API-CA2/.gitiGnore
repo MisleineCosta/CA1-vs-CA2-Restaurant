@@ -2,4 +2,3 @@ node_modules
 nodemon.json
 data
 .env
-uploads

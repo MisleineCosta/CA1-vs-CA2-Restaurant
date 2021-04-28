@@ -48,7 +48,7 @@ const orderRoutes = require("./api/routes/orders");
 mongoose.connect(
   "mongodb://costa:" +
     process.env.MONGO_ATLAS_PW +
-    "@costa.xrtym.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "@costa.xrtym.mongodb.net/costa?retryWrites=true&w=majority",
   {
     useMongoClient: true
   }
