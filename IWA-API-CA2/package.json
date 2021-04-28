@@ -1,26 +1,39 @@
 {
   "name": "costa",
-  "version": "1.0.0",
-  "description": "A Node.js RESTful API Tutorial Project (Build a simple shop API)",
+  "version": "0.0.1",
+  "description": "A Node.js RESTful API CA2 seeking out CA1 Project (Build a simple shop API)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "test": "nodemon index.js",
+    "start": "node api"
   },
   "keywords": [
     "node",
     "restful",
     "api"
   ],
-  "author": "Maximilian Schwarzmüller",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.18.2",
-    "express": "^4.16.2",
-    "mongoose": "^4.13.5",
-    "morgan": "^1.9.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/misleinecosta/CA1-vs-CA2-Restaurant.git"
   },
-  "devDependencies": {
-    "nodemon": "^1.12.1"
+  "author": "Misleine 2018428",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/misleinecosta/CA1-vs-CA2-Restaurant/issues"
+  },
+  "homepage": "https://github.com/misleinecosta/CA1-vs-CA2-Restaurant#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "del": "^6.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "follow-redirects": "^1.14.0",
+    "fs": "0.0.1-security",
+    "mongoose": "^5.12.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "path": "^0.12.7"
   }
 }

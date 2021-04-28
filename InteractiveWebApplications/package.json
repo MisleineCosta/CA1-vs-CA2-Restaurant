@@ -1,17 +1,22 @@
 {
-  "name": "iwa2-test",
+  "name": "costa",
   "version": "0.0.1",
-  "description": "my test app for IWA",
+  "description": "A Node.js RESTful API CA2 seeking out CA1 Project (Build a simple shop API)",
   "main": "index.js",
   "scripts": {
     "test": "nodemon index.js",
     "start": "node api"
-  },
+},
+  "keywords": [
+    "node",
+    "restful",
+    "api"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/misleinecosta/CA1-vs-CA2-Restaurant.git"
   },
-  "author": "Mikhail",
+  "author": "Misleine 2018428",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/misleinecosta/CA1-vs-CA2-Restaurant/issues"
